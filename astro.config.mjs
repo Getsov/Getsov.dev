@@ -1,4 +1,5 @@
 import tailwind from "@astrojs/tailwind";
+import partytown from "@astrojs/partytown";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
