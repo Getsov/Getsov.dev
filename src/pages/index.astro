@@ -11,7 +11,7 @@ import "~/styles/index.css";
 const { site } = Astro;
 const image = new URL("social.jpg", site);
 const description =
-  "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+  "Angular / Ionic developer with more than 5 years of professional experience in the front end development. If you need any help in your project, don't hesitate to contact me!";
 ---
 
 <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
@@ -21,7 +21,7 @@ const description =
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-    <title>Astro Landing Page</title>
+    <title>Valeri Getsov - Angular / Ionic Developer</title>
     <meta name="description" content={description} />
 
     <!-- fonts -->
@@ -74,6 +74,18 @@ const description =
               : "light";
           }
         });
+    </script>
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-940LMBP4Q5"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-940LMBP4Q5");
     </script>
   </head>
   <body
