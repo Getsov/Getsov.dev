@@ -10,3 +10,6 @@ a,
   @apply text-transparent bg-clip-text;
   @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
 }
+svg[astro-icon="logomark"] {
+  transform: rotate(180deg);
+}

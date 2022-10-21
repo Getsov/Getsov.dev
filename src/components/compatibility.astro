@@ -4,19 +4,9 @@ import CompatibilityList from "~/components/compatibility-list.astro";
 
 const frameworks = [
   {
-    title: "React",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
-  },
-  {
-    title: "Preact",
-    icon: "frameworks/preact",
-    url: "https://preactjs.com/",
-  },
-  {
-    title: "Svelte",
-    icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    title: "Angular",
+    icon: "akar-icons:angular-fill",
+    url: "https://angular.io/",
   },
   {
     title: "Vue",
@@ -24,14 +14,54 @@ const frameworks = [
     url: "https://vuejs.org/",
   },
   {
-    title: "Solid",
-    icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
+    title: "Ionic",
+    icon: "cib:ionic",
+    url: "https://ionic.io/",
   },
   {
-    title: "Lit",
-    icon: "frameworks/lit",
-    url: "https://lit.dev/",
+    title: "NodeJS",
+    icon: "mdi:nodejs",
+    url: "https://nodejs.org/en/",
+  },
+  {
+    title: "Express",
+    icon: "simple-icons:express",
+    url: "https://expressjs.com/",
+  },
+  {
+    title: "MongoDB",
+    icon: "simple-icons:mongodb",
+    url: "https://www.mongodb.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://github.com/",
+  },
+  {
+    title: "HTML5",
+    icon: "ant-design:html5-filled",
+    url: "https://en.wikipedia.org/wiki/HTML5",
+  },
+  {
+    title: "CSS3",
+    icon: "ci:css3",
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    title: "JavaScript",
+    icon: "akar-icons:javascript-fill",
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    title: "jQuery",
+    icon: "akar-icons:jquery-fill",
+    url: "https://jquery.com/",
+  },
+  {
+    title: "WordPress",
+    icon: "brandico:wordpress",
+    url: "https://wordpress.org/",
   },
 ];
 
@@ -69,20 +99,15 @@ const platforms = [
 ];
 ---
 
-<ContentSection title="Compatibility" id="compatibility">
+<ContentSection title="Technologies" id="technologies">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
-    <span class="text-primary">framework</span>
-    and deploy to your favorite <span class="text-primary">platform</span>.
+    As mentioned above, I'm always learning new technologies to stay on top of
+    the wave.
   </Fragment>
-  <CompatibilityList
-    title="Frameworks"
-    data={frameworks}
-    url="https://docs.astro.build/core-concepts/framework-components/"
-  />
-  <CompatibilityList
+  <CompatibilityList title="Technologies used" data={frameworks} />
+  <!-- <CompatibilityList
     title="Platforms"
     data={platforms}
     url="https://docs.astro.build/guides/deploy/"
-  />
+  /> -->
 </ContentSection>

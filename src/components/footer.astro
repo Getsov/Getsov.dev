@@ -4,33 +4,39 @@ import HeroImage from "~/components/hero-image.astro";
 
 const links = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
+    url: "https://www.linkedin.com/in/vgetsov/",
+    description: "Check my LinkedIn",
+    icon: "mdi:linkedin",
   },
   {
-    url: "https://github.com/withastro/astro",
-    description: "Astro on GitHub",
+    url: "https://twitter.com/ValeriGetsov",
+    description: "Check my Twitter",
+    icon: "mdi:twitter",
+  },
+  {
+    url: "https://github.com/Getsov",
+    description: "Check my GitHub",
     icon: "fa-brands:github-alt",
   },
   {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
+    url: "mailto:valeri@getsov.dev",
+    description: "Contact me",
+    icon: "mdi:email",
   },
 ];
 ---
 
-<footer class="relative flex items-center justify-center h-64">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
-  </div>
-  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
+<div class="flex flex-col items-center gap-4" id="contact-me">
+  <h2
+    class="text-6xl font-extrabold tracking-tight text-center gradient-text mb-2"
+  >
+    Contact me on
+  </h2>
+</div>
+<footer
+  class="bottom-0 left-0 z-20 p-4 w-full bg-offset border-t border-current shadow md:flex md:items-center md:justify-between md:p-6"
+>
+  <ul class="relative grid grid-cols-4 gap-4 sm:grid-cols-4 mb-2">
     {
       links.map((link) => (
         <li>
@@ -45,4 +51,29 @@ const links = [
       ))
     }
   </ul>
+  <span class="text-sm sm:text-center mt-2"
+    >© 2022 <a href="https://getsov.dev/" class="hover:underline"
+      >Valeri Getsov</a
+    >. All Rights Reserved.
+  </span>
 </footer>
+<!-- <footer class="relative flex items-center justify-center h-64" id="footer">
+  <div class="absolute inset-0 overflow-hidden opacity-40">
+    <HeroImage />
+  </div>
+  <ul class="relative grid grid-cols-4 gap-4 sm:grid-cols-4">
+    {
+      links.map((link) => (
+        <li>
+          <a
+            class="flex items-center justify-center w-16 h-16 p-4 border-2 border-current rounded-full"
+            href={link.url}
+          >
+            <span class="sr-only">{link.description}</span>
+            <Icon class="h-full" name={link.icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</footer> -->
