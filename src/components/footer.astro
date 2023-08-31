@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon";
 import HeroImage from "~/components/hero-image.astro";
+import * as packageJSON from "../../package.json";
+const astroVersion = packageJSON.devDependencies.astro.substring(1);
 
 const links = [
   {
@@ -34,7 +36,7 @@ const links = [
   </h2>
 </div>
 <footer
-  class="bottom-0 left-0 z-20 p-4 w-full bg-offset border-t border-current shadow md:flex md:items-center md:justify-between md:p-6"
+  class="bottom-0 left-0 z-20 p-4 w-full bg-offset border-t border-current shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col justify-center items-center"
 >
   <ul class="relative grid grid-cols-4 gap-4 sm:grid-cols-4 mb-2">
     {
@@ -55,6 +57,14 @@ const links = [
     >© 2023 <a href="https://getsov.dev/" class="hover:underline"
       >Valeri Getsov</a
     >. All Rights Reserved.
+  </span>
+  <span class="text-sm sm:text-center mt-2"
+    >Using <a
+      href="https://astro.build/"
+      class="hover:underline"
+      rel="nofollow"
+      target="_blank">Astro</a
+    > version {astroVersion}
   </span>
 </footer>
 <!-- <footer class="relative flex items-center justify-center h-64" id="footer">
