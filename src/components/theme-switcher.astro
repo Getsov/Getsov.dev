@@ -9,6 +9,7 @@ import { Icon } from "astro-icon";
 <button
   id="theme-switcher"
   type="button"
+  @click=""
   class="scale-0 transition-all origin-[right_center] duration-500 -ml-14"
 >
   <div id="icon-theme-light">
@@ -42,12 +43,16 @@ import { Icon } from "astro-icon";
       .querySelector(`#icon-theme-${themeNext}`)
       .classList.remove("hidden");
   };
-
   button.addEventListener("click", () => {
     const themeNext = getThemeNext();
     document.documentElement.dataset.theme = themeNext;
     localStorage.setItem("theme", themeNext);
     updateIcon();
+
+    // Fire a custom event to notify other components
+    window.dispatchEvent(
+      new CustomEvent("themeChanged", { detail: { theme: themeNext } })
+    );
   });
 
   updateIcon();

@@ -11,4 +11,5 @@ a,
 }
 svg[astro-icon="logomark"] {
   transform: rotate(180deg);
+  color: var(--color-text);
 }

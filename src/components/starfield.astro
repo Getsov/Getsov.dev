@@ -60,7 +60,7 @@
   const resizeObserver = new ResizeObserver(setup);
   resizeObserver.observe(container);
 
-  function setup() {
+  function setup(test?: any) {
     rafId > 0 && cancelAnimationFrame(rafId);
     const { clientWidth: width, clientHeight: height } = container;
 
@@ -76,10 +76,29 @@
       star.y = Math.random() * height - height / 2;
       star.z = 0;
     }
-
     ctx.translate(width / 2, height / 2);
-    ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-    ctx.strokeStyle = "white";
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+      ctx.strokeStyle = "white";
+    } else {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.4)"; // Changed for light theme
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.7)"; // Changed for light theme
+    }
+    // ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+    // ctx.strokeStyle = "white";
+    window.addEventListener("themeChanged", function (e) {
+      const newTheme = e.detail.theme;
+      if (newTheme === "dark") {
+        // Dark theme setup here
+        ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+        ctx.strokeStyle = "white";
+      } else {
+        // Light theme setup here
+        ctx.fillStyle = "rgba(255, 255, 255, 0.4)"; // Changed for light theme
+        ctx.strokeStyle = "rgba(0, 0, 0, 0.7)"; // Changed for light theme
+      }
+    });
     rafId = requestAnimationFrame(frame);
   }
 
