@@ -78,12 +78,12 @@
     }
     ctx.translate(width / 2, height / 2);
     const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark") {
+    if (currentTheme === "light") {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+      ctx.strokeStyle = "rgba(0, 0, 0, 0.7)";
+    } else {
       ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
       ctx.strokeStyle = "white";
-    } else {
-      ctx.fillStyle = "rgba(255, 255, 255, 0.4)"; // Changed for light theme
-      ctx.strokeStyle = "rgba(0, 0, 0, 0.7)"; // Changed for light theme
     }
     // ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
     // ctx.strokeStyle = "white";
