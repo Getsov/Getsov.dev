@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import HeroImage from "~/components/hero-image.astro";
 import * as packageJSON from "../../package.json";
+import ContentSection from "./content-section.astro";
 const astroVersion = packageJSON.devDependencies.astro.substring(1);
 
 const links = [
@@ -28,15 +29,18 @@ const links = [
 ];
 ---
 
-<div class="flex flex-col items-center gap-4" id="contact-me">
-  <h2
-    class="text-6xl font-extrabold tracking-tight text-center gradient-text mb-2"
-  >
-    Contact me
-  </h2>
+<div class="px-8 space-y-24">
+  <ContentSection title="Contact me" id="footer">
+    <Fragment slot="lead"
+      >Let's Connect! For project inquiries or just to say hi, feel free to
+      reach out through LinkedIn, Twitter, or GitHub. Looking forward to
+      collaborating with you!
+    </Fragment>
+  </ContentSection>
 </div>
+
 <footer
-  class="bottom-0 left-0 z-20 p-4 w-full bg-offset border-t border-current shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col justify-center items-center"
+  class="bottom-0 left-0 z-20 p-4 w-full bg-offset border-t border-current shadow md:flex md:items-center md:justify-between md:p-6 flex flex-col justify-center items-center mt-14"
 >
   <ul class="relative grid grid-cols-4 gap-4 sm:grid-cols-4 mb-2">
     {

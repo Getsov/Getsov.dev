@@ -2,7 +2,7 @@
 import ContentSection from "~/components/content-section.astro";
 import CompatibilityList from "~/components/compatibility-list.astro";
 
-const frameworks = [
+const frontendTech = [
   {
     title: "Angular",
     icon: "akar-icons:angular-fill",
@@ -12,31 +12,6 @@ const frameworks = [
     title: "Vue",
     icon: "frameworks/vue",
     url: "https://vuejs.org/",
-  },
-  {
-    title: "Ionic",
-    icon: "cib:ionic",
-    url: "https://ionic.io/",
-  },
-  {
-    title: "NodeJS",
-    icon: "mdi:nodejs",
-    url: "https://nodejs.org/en/",
-  },
-  {
-    title: "Express",
-    icon: "simple-icons:express",
-    url: "https://expressjs.com/",
-  },
-  {
-    title: "MongoDB",
-    icon: "simple-icons:mongodb",
-    url: "https://www.mongodb.com/",
-  },
-  {
-    title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://github.com/",
   },
   {
     title: "HTML5",
@@ -58,45 +33,97 @@ const frameworks = [
     icon: "akar-icons:jquery-fill",
     url: "https://jquery.com/",
   },
+];
+
+const backendTech = [
+  {
+    title: "NodeJS",
+    icon: "mdi:nodejs",
+    url: "https://nodejs.org/en/",
+  },
+  {
+    title: "Express",
+    icon: "simple-icons:express",
+    url: "https://expressjs.com/",
+  },
+  {
+    title: "MongoDB",
+    icon: "simple-icons:mongodb",
+    url: "https://www.mongodb.com/",
+  },
+];
+
+const hybridAppTech = [
+  {
+    title: "Ionic",
+    icon: "cib:ionic",
+    url: "https://ionic.io/",
+  },
+  {
+    title: "Angular",
+    icon: "akar-icons:angular-fill",
+    url: "https://angular.io/",
+  },
+];
+
+const versionControl = [
+  {
+    title: "Git",
+    icon: "mdi:git",
+    url: "https://git-scm.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://github.com/",
+  },
+  {
+    title: "BitBucket",
+    icon: "fa-brands:bitbucket",
+    url: "https://bitbucket.org/",
+  },
+];
+
+const cmsPlatforms = [
   {
     title: "WordPress",
     icon: "brandico:wordpress",
     url: "https://wordpress.org/",
   },
+  {
+    title: "OpenCart",
+    icon: "mdi:cart",
+    url: "https://www.opencart.com/",
+  },
 ];
 
-const platforms = [
-  {
-    title: "Netlify",
-    icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
-  },
-  {
-    title: "Vercel",
-    icon: "platforms/vercel",
-    url: "https://vercel.com/",
-  },
-  {
-    title: "Cloudflare",
-    icon: "fa-brands:cloudflare",
-    url: "https://pages.cloudflare.com/",
-  },
-  {
-    title: "Render",
-    icon: "platforms/render",
-    url: "https://render.com/",
-  },
-  {
-    title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://pages.github.com/",
-  },
-  {
-    title: "GitLab",
-    icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
-  },
-];
+// const devOpsPlatforms = [
+//   {
+//     title: "Netlify",
+//     icon: "platforms/netlify",
+//     url: "https://www.netlify.com/",
+//   },
+//   {
+//     title: "Vercel",
+//     icon: "platforms/vercel",
+//     url: "https://vercel.com/",
+//   },
+//   {
+//     title: "Cloudflare",
+//     icon: "fa-brands:cloudflare",
+//     url: "https://pages.cloudflare.com/",
+//   },
+//   {
+//     title: "Render",
+//     icon: "platforms/render",
+//     url: "https://render.com/",
+//   },
+//   {
+//     title: "GitLab",
+//     icon: "fa-brands:gitlab",
+//     url: "https://docs.gitlab.com/ee/user/project/pages/",
+//   },
+// ];
 ---
 
 <ContentSection title="Technologies" id="technologies">
@@ -104,10 +131,10 @@ const platforms = [
     As mentioned above, I'm always learning new technologies to stay on top of
     the wave.
   </Fragment>
-  <CompatibilityList title="Technologies used" data={frameworks} />
-  <!-- <CompatibilityList
-    title="Platforms"
-    data={platforms}
-    url="https://docs.astro.build/guides/deploy/"
-  /> -->
+  <CompatibilityList title="Frontend Technologies" data={frontendTech} />
+  <CompatibilityList title="Backend Technologies" data={backendTech} />
+  <CompatibilityList title="Hybrid App Technologies" data={hybridAppTech} />
+  <CompatibilityList title="Version Control Systems" data={versionControl} />
+  <CompatibilityList title="CMS Platforms" data={cmsPlatforms} />
+  <!-- <CompatibilityList title="DevOps Platforms" data={devOpsPlatforms} /> -->
 </ContentSection>
