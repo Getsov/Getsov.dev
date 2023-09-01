@@ -13,10 +13,10 @@ const { webp, avif, png } = generateImage("src/assets/Valeri-Getsov-Opt.jpeg", {
   outputDir: "public/assets/images/Valeri-Getsov",
   urlPath: "/assets/images/Valeri-Getsov",
 });
-
-const avifSrcset = avif.map(({ srcset }) => srcset).join(",");
-const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
-const pngSrcset = png.map(({ srcset }) => srcset).join(",");
+const generateSrcset = (images) => images.map(({ srcset }) => srcset).join(",");
+const avifSrcset = generateSrcset(avif);
+const webpSrcset = generateSrcset(webp);
+const pngSrcset = generateSrcset(png);
 ---
 
 <section class="relative h-full bg-black">
@@ -48,9 +48,19 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
         src={png[0].url}
         width={png[0].width}
         height={png[0].height}
-        alt="A floating Valeri Getsov"
+        alt="Valeri Getsov - Angular and Ionic freelance and contract developer"
       />
     </picture>
+    <!-- Creating a download button -->
+    <a
+      href="/assets/Valeri-Getsov-CV.pdf"
+      download
+      class="row-span-1 col-span-full self-start justify-self-center mb-12"
+    >
+      <button class="download-button max-w-xl text-xl font-bold text-center"
+        >Download my CV in .pdf</button
+      >
+    </a>
   </div>
 </section>
 
@@ -71,6 +81,26 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
 
   img.object-cover {
     border-radius: 5%;
+  }
+
+  .download-button {
+    padding: 15px 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: white;
+    background-image: linear-gradient(
+      to bottom right,
+      var(--tw-gradient-stops)
+    );
+    --tw-gradient-from: #6366f1;
+    --tw-gradient-to: rgb(99 102 241 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: rgb(217 70 239 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #d946ef, var(--tw-gradient-to);
+    --tw-gradient-to: #ec4899;
   }
 
   @media (prefers-reduced-motion: reduce) {
