@@ -10,6 +10,8 @@ a,
   @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
 }
 svg[astro-icon="logomark"] {
-  transform: rotate(180deg);
+  transform: rotate(180deg); 
+}
+svg {
   color: var(--color-text);
 }
